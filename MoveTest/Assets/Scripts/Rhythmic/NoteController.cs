@@ -42,6 +42,7 @@ public class NoteController : MonoBehaviour
 
     public void DestroyNote()
     {
+        rb.DOKill();
         Destroy(gameObject);
     }
 }

@@ -24,6 +24,7 @@ public class PauseManager : MonoBehaviour
     }
 
     public void Retry(){
+        AudioManager.instance.GetMusicEventInstance().stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
