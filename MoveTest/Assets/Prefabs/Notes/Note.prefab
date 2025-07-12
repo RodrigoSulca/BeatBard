@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.3
   points: 5
+  playerStats: {fileID: 11400000, guid: adaeaf17caba84f4898525c4a0cf914c, type: 2}
 --- !u!54 &5247535240651746920
 Rigidbody:
   m_ObjectHideFlags: 0

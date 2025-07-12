@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections.Generic;
 using FMOD.Studio;
+using UnityEngine.SceneManagement;
 
 public class NotesGenerator : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class NotesGenerator : MonoBehaviour
     public bool onRhythm;
     public bool canChange;
     public float changeCooldown;
+    public Image finishObj;
     public TextAsset[] charts;
     public Transform[] lines;
     public GameObject[] notePrefabs;
@@ -36,6 +38,16 @@ public class NotesGenerator : MonoBehaviour
 
     void Update()
     {
+        PLAYBACK_STATE state;
+        musicEventInstance.getPlaybackState(out state);
+
+        if(state == PLAYBACK_STATE.STOPPED)
+        {
+            finishObj.DOFade(1,0.5f).OnComplete(() =>
+            {
+                SceneManager.LoadScene("FinishScore");
+            });
+        }
         if (Input.GetKeyDown(KeyCode.Space) && canChange)
         {
             ChangeInstrument();

@@ -4,6 +4,7 @@ public class NoteController : MonoBehaviour
 {
     public float speed;
     public int points;
+    public PlayerStats playerStats;
     private HitNotes hitNotes;
     private GameObject endPoint;
     private MultiplierController multiplierController;
@@ -26,6 +27,7 @@ public class NoteController : MonoBehaviour
             {
                 multiplierController.FailNote();
                 hitNotes.NoteText("Miss");
+                playerStats.failedNotes++;
             }
             Destroy(gameObject);
         });

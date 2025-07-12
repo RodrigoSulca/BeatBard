@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Branches/Eros.unity
     guid: ab40cbd408feddf4dbec3c284e2e3e3a
+  - enabled: 1
+    path: Assets/Scenes/FinishScore.unity
+    guid: 457019a44e4ce7c4e8b78496fa95f5c8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

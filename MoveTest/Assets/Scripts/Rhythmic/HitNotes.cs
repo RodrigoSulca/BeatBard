@@ -12,6 +12,7 @@ public class HitNotes : MonoBehaviour
     public GameObject textPrefab;
     public Transform textSpawner;
     public ParticleSystem hitParticle;
+    public PlayerStats playerStats;
 
     private bool active;
     [HideInInspector] public Renderer mRenderer;
@@ -48,6 +49,7 @@ public class HitNotes : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.playNote, this.transform.position);
             NoteText("Hit!");
             active = false;
+            playerStats.hitNotes++;
         }
     }
     public void NoteText(string text)
