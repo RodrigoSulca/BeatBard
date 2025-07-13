@@ -38,8 +38,7 @@ public class NoteController : MonoBehaviour
         int finalPoints = points * multiplierController.actualMult;
         multiplierController.totalPoints += finalPoints;
         multiplierController.hpSlider.value += finalPoints / 10;
-        rb.DOKill();
-        Destroy(gameObject);
+        DestroyNote();
     }
 
     public void DestroyNote()

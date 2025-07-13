@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638872333777390353
+  lastModified: 638879752319461569
   FileSizes:
   - Name: Desktop
-    Value: 1372
+    Value: 1380
   Exists: 1
 --- !u!114 &-6127981853966445771
 MonoBehaviour:
@@ -34,14 +34,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Invulnerable
   Guid:
-    Data1: 1628593731
-    Data2: 1085885767
-    Data3: 804354744
-    Data4: -1193989346
+    Data1: 2013585442
+    Data2: 1261177140
+    Data3: 844446354
+    Data4: -189898175
   Banks:
   - {fileID: -3381010798741283250}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -62,10 +62,10 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638878500227029462
+  lastModified: 638879791383105477
   FileSizes:
   - Name: Desktop
-    Value: 102656
+    Value: 105312
   Exists: 1
 --- !u!114 &-3298278027716820412
 MonoBehaviour:
@@ -81,14 +81,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/FailInstrument
   Guid:
-    Data1: -1459948160
-    Data2: 1161757410
-    Data3: 2046283188
-    Data4: 729530009
+    Data1: -2056685804
+    Data2: 1078014222
+    Data3: -1134172225
+    Data4: 891154515
   Banks:
   - {fileID: -3381010798741283250}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -121,6 +121,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 65044
+--- !u!114 &-1767469665045012042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/FailNote
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/FailNote
+  Guid:
+    Data1: 1829024214
+    Data2: 1283838701
+    Data3: 1105624456
+    Data4: -783569754
+  Banks:
+  - {fileID: -3381010798741283250}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +167,6 @@ MonoBehaviour:
   - {fileID: -3381010798741283250}
   - {fileID: 344993077328619148}
   EditorEvents:
-  - {fileID: 6292220811775350387}
   - {fileID: -6127981853966445771}
   - {fileID: 7286556231981028704}
   - {fileID: 1319675968020553716}
@@ -148,29 +174,30 @@ MonoBehaviour:
   - {fileID: 7918468185513669485}
   - {fileID: 1755191811090341750}
   - {fileID: -2077120132683591714}
+  - {fileID: -1767469665045012042}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1460188634917210604}
   StringsBanks:
   - {fileID: -7332194204959166571}
   cacheVersion: 131848
-  cacheTime: 638878500227479460
+  cacheTime: 638879791383105477
   SerializableEventsDict:
-  - key: event:/FailNote
-    index: 0
   - key: event:/SFX/Invulnerable
-    index: 1
+    index: 0
   - key: event:/NotesSFX/PlayNote
-    index: 2
+    index: 1
   - key: event:/SFX/HealthPlayer
-    index: 3
+    index: 2
   - key: event:/SFX/FailInstrument
-    index: 4
+    index: 3
   - key: event:/SFX/Impact
-    index: 5
+    index: 4
   - key: event:/SFX/ChangeInstrument
-    index: 6
+    index: 5
   - key: event:/Songs/TutorialSong
+    index: 6
+  - key: event:/SFX/FailNote
     index: 7
 --- !u!114 &344993077328619148
 MonoBehaviour:
@@ -206,14 +233,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/HealthPlayer
   Guid:
-    Data1: 1399382378
-    Data2: 1293859072
-    Data3: -1854925661
-    Data4: -864956367
+    Data1: -2041779642
+    Data2: 1150524363
+    Data3: 149311400
+    Data4: -222649616
   Banks:
   - {fileID: -3381010798741283250}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -234,7 +261,7 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638872333777370712
+  lastModified: 638879752319441565
   FileSizes:
   - Name: Desktop
     Value: 1524
@@ -253,41 +280,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/ChangeInstrument
   Guid:
-    Data1: 701622760
-    Data2: 1327069195
-    Data3: 1646527625
-    Data4: 893984401
+    Data1: -1192716787
+    Data2: 1222643395
+    Data3: 2043103640
+    Data4: 982758522
   Banks:
   - {fileID: -3381010798741283250}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6292220811775350387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FailNote
-  m_EditorClassIdentifier: 
-  Path: event:/FailNote
-  Guid:
-    Data1: 1184030711
-    Data2: 1192521571
-    Data3: -985773123
-    Data4: 784211291
-  Banks:
-  - {fileID: -3381010798741283250}
-  IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -307,19 +307,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/NotesSFX/PlayNote
   Guid:
-    Data1: -1789744169
-    Data2: 1238655916
-    Data3: 1946589086
-    Data4: -1606428518
+    Data1: -1359896584
+    Data2: 1211560560
+    Data3: 2051223996
+    Data4: 91283200
   Banks:
   - {fileID: 7596344756690353013}
+  - {fileID: -3381010798741283250}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 262
+  Length: 0
 --- !u!114 &7596344756690353013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,10 +336,10 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/NotesSFX.bank
   Name: NotesSFX
   StudioPath: bank:/NotesSFX
-  lastModified: 638872333779383423
+  lastModified: 638879752320012059
   FileSizes:
   - Name: Desktop
-    Value: 5120
+    Value: 5184
   Exists: 1
 --- !u!114 &7918468185513669485
 MonoBehaviour:
@@ -354,14 +355,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Impact
   Guid:
-    Data1: 578613402
-    Data2: 1281160453
-    Data3: 485664433
-    Data4: 971758329
+    Data1: 1651887802
+    Data2: 1332738707
+    Data3: 56576671
+    Data4: -541423409
   Banks:
   - {fileID: -3381010798741283250}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1

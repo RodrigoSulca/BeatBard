@@ -56,7 +56,6 @@ public class MultiplierController : MonoBehaviour
         actualMult = 1;
         cantNotes = initCantNotes;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.noteFailed, this.transform.position);
-        hitNotes.NoteText("Miss!");
         if (feedback != null)
                 feedback.ShowFeedback(false);
 

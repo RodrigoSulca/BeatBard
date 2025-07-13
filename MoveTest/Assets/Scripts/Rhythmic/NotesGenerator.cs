@@ -76,11 +76,19 @@ public class NotesGenerator : MonoBehaviour
 
     void CargarCancion()
     {
-        notesList = JsonUtility.FromJson<NotesList>(charts[(int)instrument].text);
+        NotesList fullList = JsonUtility.FromJson<NotesList>(charts[(int)instrument].text);
         notasGeneradas.Clear();
-        if (notesList != null && notesList.notes != null)
+
+        if (fullList != null && fullList.notes != null)
         {
-            Debug.Log("Notas cargadas: " + notesList.notes.Length);
+            List<Note> futuras = new();
+            foreach (var n in fullList.notes)
+            {
+                if (n.spawnTime > tiempoActual)
+                    futuras.Add(n);
+            }
+            notesList = new NotesList { notes = futuras.ToArray() };
+            Debug.Log("Notas futuras cargadas: " + notesList.notes.Length);
         }
     }
 

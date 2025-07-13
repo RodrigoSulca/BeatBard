@@ -558,8 +558,8 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     RealChannelCount:
-      Value: 0
-      HasValue: 0
+      Value: 128
+      HasValue: 1
     DSPBufferLength:
       Value: 0
       HasValue: 0
