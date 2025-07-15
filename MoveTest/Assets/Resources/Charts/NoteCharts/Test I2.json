@@ -1,24 +1,164 @@
 {
   "notes": [
-    {"spawnTime": 8.2, "line": 3}, {"spawnTime": 8.2, "line": 4},
-    {"spawnTime": 8.7, "line": 3}, {"spawnTime": 8.7, "line": 4},
-    {"spawnTime": 9.1, "line": 3}, {"spawnTime": 9.1, "line": 4},
-    {"spawnTime": 9.5, "line": 3}, {"spawnTime": 9.5, "line": 4},
-    {"spawnTime": 9.9, "line": 1}, {"spawnTime": 9.9, "line": 2},
-    {"spawnTime": 10.3, "line": 2}, {"spawnTime": 10.3, "line": 3},
-    {"spawnTime": 10.8, "line": 2}, {"spawnTime": 10.8, "line": 3},
-    {"spawnTime": 11.2, "line": 2}, {"spawnTime": 11.2, "line": 3},
-    {"spawnTime": 11.6, "line": 2}, {"spawnTime": 11.6, "line": 3},
-    {"spawnTime": 12.0, "line": 1}, {"spawnTime": 12.0, "line": 2},
-    {"spawnTime": 12.4, "line": 1}, {"spawnTime": 12.4, "line": 2},
-    {"spawnTime": 12.9, "line": 1}, {"spawnTime": 12.9, "line": 2},
-    {"spawnTime": 13.3, "line": 1}, {"spawnTime": 13.3, "line": 2},
-    {"spawnTime": 13.7, "line": 1}, {"spawnTime": 13.7, "line": 2},
-    {"spawnTime": 14.1, "line": 1}, {"spawnTime": 14.1, "line": 2},
-    {"spawnTime": 14.5, "line": 3}, {"spawnTime": 14.5, "line": 4},
-    {"spawnTime": 15.0, "line": 3}, {"spawnTime": 15.0, "line": 4},
-    {"spawnTime": 15.4, "line": 3}, {"spawnTime": 15.4, "line": 4},
-    {"spawnTime": 15.8, "line": 3}, {"spawnTime": 15.8, "line": 4},
-    {"spawnTime": 16.2, "line": 2}, {"spawnTime": 16.2, "line": 3}
+    {
+        "spawnTime": 8.1,
+        "line": 1
+    },
+    {
+        "spawnTime": 8.1,
+        "line": 1
+    },
+    {
+        "spawnTime": 8.6,
+        "line": 1
+    },
+    {
+        "spawnTime": 8.6,
+        "line": 1
+    },
+    {
+        "spawnTime": 9.0,
+        "line": 1
+    },
+    {
+        "spawnTime": 9.0,
+        "line": 1
+    },
+    {
+        "spawnTime": 9.4,
+        "line": 1
+    },
+    {
+        "spawnTime": 9.4,
+        "line": 1
+    },
+    {
+        "spawnTime": 9.8,
+        "line": 1
+    },
+    {
+        "spawnTime": 9.8,
+        "line": 1
+    },
+    {
+        "spawnTime": 10.2,
+        "line": 1
+    },
+    {
+        "spawnTime": 10.2,
+        "line": 1
+    },
+    {
+        "spawnTime": 10.7,
+        "line": 1
+    },
+    {
+        "spawnTime": 10.7,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.1,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.1,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.5,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.5,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.9,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.9,
+        "line": 1
+    },
+    {
+        "spawnTime": 12.3,
+        "line": 1
+    },
+    {
+        "spawnTime": 12.3,
+        "line": 1
+    },
+    {
+        "spawnTime": 12.8,
+        "line": 1
+    },
+    {
+        "spawnTime": 12.8,
+        "line": 1
+    },
+    {
+        "spawnTime": 13.2,
+        "line": 1
+    },
+    {
+        "spawnTime": 13.2,
+        "line": 1
+    },
+    {
+        "spawnTime": 13.6,
+        "line": 1
+    },
+    {
+        "spawnTime": 13.6,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.0,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.0,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.4,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.4,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.9,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.9,
+        "line": 1
+    },
+    {
+        "spawnTime": 15.3,
+        "line": 1
+    },
+    {
+        "spawnTime": 15.3,
+        "line": 1
+    },
+    {
+        "spawnTime": 15.7,
+        "line": 1
+    },
+    {
+        "spawnTime": 15.7,
+        "line": 1
+    },
+    {
+        "spawnTime": 16.1,
+        "line": 1
+    },
+    {
+        "spawnTime": 16.1,
+        "line": 1
+    }
   ]
 }
