@@ -336,7 +336,7 @@ Transform:
   m_GameObject: {fileID: 81368745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18, y: -0, z: -14.109}
+  m_LocalPosition: {x: -0.092, y: -0, z: -14.109}
   m_LocalScale: {x: 1, y: 0.1272, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4720,7 +4720,7 @@ Transform:
   m_GameObject: {fileID: 119670678}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.111, z: -5.42}
+  m_LocalPosition: {x: -0.092, y: 0.111, z: -5.42}
   m_LocalScale: {x: 1, y: 0.1272, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9859,7 +9859,7 @@ GameObject:
   - component: {fileID: 354368496}
   - component: {fileID: 354368495}
   m_Layer: 0
-  m_Name: numeros
+  m_Name: Multiplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9873,7 +9873,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354368494}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e35cc0b8c7647234bacdf26c651ac562, type: 2}
   m_CullingMode: 0
@@ -9951,11 +9951,11 @@ Transform:
   m_GameObject: {fileID: 354368494}
   serializedVersion: 2
   m_LocalRotation: {x: 0.75098, y: 0.02316787, z: 0.026385885, w: 0.65939075}
-  m_LocalPosition: {x: 57.34, y: 0.55, z: 0.11}
-  m_LocalScale: {x: 0.092093535, y: 0.092093535, z: 0.092093535}
+  m_LocalPosition: {x: 2.040001, y: 0.55, z: -10.42}
+  m_LocalScale: {x: 0.09209354, y: 0.092093535, z: 0.09209354}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 627020524}
   m_LocalEulerAnglesHint: {x: 98.445984, y: -28.54602, z: -28.285004}
 --- !u!1 &410087039
 GameObject:
@@ -10938,6 +10938,7 @@ Transform:
   - {fileID: 81368746}
   - {fileID: 1377167058}
   - {fileID: 1735581149}
+  - {fileID: 354368497}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634607954
@@ -13211,6 +13212,8 @@ MonoBehaviour:
   feedback: {fileID: 81368753}
   hitNotes: {fileID: 81368750}
   beatFlash: {fileID: 1703072849}
+  multAnimator: {fileID: 354368495}
+  playerStats: {fileID: 11400000, guid: adaeaf17caba84f4898525c4a0cf914c, type: 2}
 --- !u!114 &983176797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15013,7 +15016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1255090158
 Transform:
   m_ObjectHideFlags: 0
@@ -20183,7 +20186,6 @@ SceneRoots:
   - {fileID: 83994942}
   - {fileID: 1769237208}
   - {fileID: 1544730286}
-  - {fileID: 354368497}
   - {fileID: 855879301}
   - {fileID: 608388725}
   - {fileID: 1395858241}

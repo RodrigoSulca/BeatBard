@@ -17,6 +17,8 @@ public class MultiplierController : MonoBehaviour
     public NoteFeedback feedback;
     public HitNotes hitNotes;
     public BeatFlash beatFlash;
+    public Animator multAnimator;
+    public PlayerStats playerStats;
 
     void Start()
     {
@@ -28,15 +30,17 @@ public class MultiplierController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        multAnimator.SetInteger("mult",actualMult);
         multSlider.value = comboRewards.actualCombo;
         CheckMult();
         multiplierTxt.text = $"x{actualMult}";
         pointsTxt.text = totalPoints.ToString();
         multSlider.maxValue = cantNotes;
-        if(actualMult >= 4){
+        if (actualMult >= 4)
+        {
             multSlider.value = multSlider.maxValue;
         }
+        playerStats.score = totalPoints;
     }
 
     void CheckMult()

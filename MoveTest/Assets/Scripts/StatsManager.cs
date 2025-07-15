@@ -1,11 +1,14 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StatsManager : MonoBehaviour
 {
     public PlayerStats playerStats;
     [Header("UI")]
+    public Image blackEffect;
     public TMP_Text scoreTxt;
     public TMP_Text failedNotesTxt;
     public TMP_Text hitNotesTxt;
@@ -15,6 +18,7 @@ public class StatsManager : MonoBehaviour
         scoreTxt.text += playerStats.score.ToString();
         failedNotesTxt.text += playerStats.failedNotes.ToString();
         hitNotesTxt.text += playerStats.hitNotes.ToString();
+        blackEffect.DOFade(0, 0.5f);
     }
 
     public void ChangeScene(string sceneName)
