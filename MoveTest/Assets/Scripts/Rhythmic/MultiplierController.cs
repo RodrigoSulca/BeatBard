@@ -5,11 +5,12 @@ public class MultiplierController : MonoBehaviour
 {
     public int actualMult;
     public int cantNotes;
+    public int actualNotes;
     public int totalPoints;
-    public Slider multSlider;
     public Slider hpSlider;
     private int initCantNotes;
     public Sprite[] multNums;
+    public GameObject[] multBars;
     public SpriteRenderer multSpriteR;
     public TMP_Text multiplierTxt;
     public TMP_Text pointsTxt;
@@ -24,46 +25,77 @@ public class MultiplierController : MonoBehaviour
     {
         comboRewards = GetComponent<ComboRewards>();
         initCantNotes = cantNotes;
-        multSlider.maxValue = initCantNotes;
     }
 
     // Update is called once per frame
     void Update()
     {
-        multAnimator.SetInteger("mult",actualMult);
-        multSlider.value = comboRewards.actualCombo;
+        multAnimator.SetInteger("mult", actualMult);
         CheckMult();
         multiplierTxt.text = $"x{actualMult}";
         pointsTxt.text = totalPoints.ToString();
-        multSlider.maxValue = cantNotes;
-        if (actualMult >= 4)
-        {
-            multSlider.value = multSlider.maxValue;
-        }
         playerStats.score = totalPoints;
     }
 
     void CheckMult()
     {
-        if (comboRewards.actualCombo >= cantNotes && actualMult < 4)
+        if (actualMult < 4)
         {
-            multSlider.minValue = cantNotes;
-            cantNotes += initCantNotes;
-            actualMult++;
+            switch (actualNotes)
+            {
+                case 1:
+                    multBars[0].SetActive(true);
+                    break;
+
+                case 2:
+                    multBars[1].SetActive(true);
+                    break;
+
+                case 3:
+                    multBars[2].SetActive(true);
+                    break;
+
+                case 4:
+                    multBars[3].SetActive(true);
+                    break;
+
+                case 5:
+                    actualNotes = 0;
+                    actualMult++;
+                    multSpriteR.sprite = multNums[actualMult - 1];
+                    ResetMultBars();
+                    break;
+            }
         }
-        multSpriteR.sprite = multNums[actualMult - 1];
+        else
+        {
+            multBars[0].SetActive(true);
+            multBars[1].SetActive(true);
+            multBars[2].SetActive(true);
+            multBars[3].SetActive(true);
+        }
     }
 
     public void FailNote()
     {
+        ResetMultBars();
         comboRewards.ResetCombo();
         actualMult = 1;
         cantNotes = initCantNotes;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.noteFailed, this.transform.position);
         if (feedback != null)
-                feedback.ShowFeedback(false);
+            feedback.ShowFeedback(false);
 
         if (beatFlash != null)
-                beatFlash.Flash();
+            beatFlash.Flash();
+    }
+
+    private void ResetMultBars()
+    {
+        foreach (GameObject multBar in multBars)
+        {
+            multBar.SetActive(false);
+        }
+        actualNotes = 0;
     }
 }

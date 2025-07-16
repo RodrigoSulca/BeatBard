@@ -5,6 +5,7 @@ public class HitNotes : MonoBehaviour
     public KeyCode inputKey;
     public Material activeMaterial;
     public ComboRewards comboRewards;
+    public MultiplierController multiplierController;
 
     public Material[] materials;
     public Material[] mastilMaterial;
@@ -45,6 +46,7 @@ public class HitNotes : MonoBehaviour
         {
             hitParticle.Play();
             comboRewards.actualCombo++;
+            multiplierController.actualNotes++;
             other.GetComponent<NoteController>().PlayNote();
             AudioManager.instance.PlayOneShot(FMODEvents.instance.playNote, this.transform.position);
             NoteText("Hit!");
