@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7332194204959166571
+--- !u!114 &-8842560172905477890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Songs.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Documents/AudioSystem/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638879752319461569
+  Path: ../../../../AudioSystem/AudioSystem/Build/Desktop/Songs.bank
+  Name: Songs
+  StudioPath: bank:/Songs
+  lastModified: 638878500220000000
   FileSizes:
   - Name: Desktop
-    Value: 1380
+    Value: 795232
   Exists: 1
 --- !u!114 &-6127981853966445771
 MonoBehaviour:
@@ -39,7 +39,7 @@ MonoBehaviour:
     Data3: 844446354
     Data4: -189898175
   Banks:
-  - {fileID: -3381010798741283250}
+  - {fileID: -3839155035180856262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3381010798741283250
+--- !u!114 &-3839155035180856262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,10 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Documents/AudioSystem/Build/Desktop/SFX.bank
+  Path: ../../../../AudioSystem/AudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638879791383105477
+  lastModified: 638879791380000000
   FileSizes:
   - Name: Desktop
     Value: 105312
@@ -86,7 +86,7 @@ MonoBehaviour:
     Data3: -1134172225
     Data4: 891154515
   Banks:
-  - {fileID: -3381010798741283250}
+  - {fileID: -3839155035180856262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -113,7 +113,7 @@ MonoBehaviour:
     Data3: 1335521436
     Data4: -2079294966
   Banks:
-  - {fileID: 344993077328619148}
+  - {fileID: -8842560172905477890}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
     Data3: 1105624456
     Data4: -783569754
   Banks:
-  - {fileID: -3381010798741283250}
+  - {fileID: -3839155035180856262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -148,6 +148,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1339577577513624302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NotesSFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../AudioSystem/AudioSystem/Build/Desktop/NotesSFX.bank
+  Name: NotesSFX
+  StudioPath: bank:/NotesSFX
+  lastModified: 638879752320000000
+  FileSizes:
+  - Name: Desktop
+    Value: 5184
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,11 +181,11 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -7332194204959166571}
-  - {fileID: 1460188634917210604}
-  - {fileID: 7596344756690353013}
-  - {fileID: -3381010798741283250}
-  - {fileID: 344993077328619148}
+  - {fileID: 1686951305166071237}
+  - {fileID: 7315548849112679275}
+  - {fileID: -1339577577513624302}
+  - {fileID: -3839155035180856262}
+  - {fileID: -8842560172905477890}
   EditorEvents:
   - {fileID: -6127981853966445771}
   - {fileID: 7286556231981028704}
@@ -177,11 +197,11 @@ MonoBehaviour:
   - {fileID: -1767469665045012042}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1460188634917210604}
+  - {fileID: 7315548849112679275}
   StringsBanks:
-  - {fileID: -7332194204959166571}
+  - {fileID: 1686951305166071237}
   cacheVersion: 131848
-  cacheTime: 638879791383105477
+  cacheTime: 638879791380000000
   SerializableEventsDict:
   - key: event:/SFX/Invulnerable
     index: 0
@@ -199,26 +219,6 @@ MonoBehaviour:
     index: 6
   - key: event:/SFX/FailNote
     index: 7
---- !u!114 &344993077328619148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Songs.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Documents/AudioSystem/Build/Desktop/Songs.bank
-  Name: Songs
-  StudioPath: bank:/Songs
-  lastModified: 638878500227479460
-  FileSizes:
-  - Name: Desktop
-    Value: 795232
-  Exists: 1
 --- !u!114 &1319675968020553716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
     Data3: 149311400
     Data4: -222649616
   Banks:
-  - {fileID: -3381010798741283250}
+  - {fileID: -3839155035180856262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1460188634917210604
+--- !u!114 &1686951305166071237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,15 +256,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Documents/AudioSystem/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638879752319441565
+  Path: ../../../../AudioSystem/AudioSystem/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638879752310000000
   FileSizes:
   - Name: Desktop
-    Value: 1524
+    Value: 1380
   Exists: 1
 --- !u!114 &1755191811090341750
 MonoBehaviour:
@@ -285,7 +285,7 @@ MonoBehaviour:
     Data3: 2043103640
     Data4: 982758522
   Banks:
-  - {fileID: -3381010798741283250}
+  - {fileID: -3839155035180856262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -312,8 +312,8 @@ MonoBehaviour:
     Data3: 2051223996
     Data4: 91283200
   Banks:
-  - {fileID: 7596344756690353013}
-  - {fileID: -3381010798741283250}
+  - {fileID: -1339577577513624302}
+  - {fileID: -3839155035180856262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -321,7 +321,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7596344756690353013
+--- !u!114 &7315548849112679275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,15 +331,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/NotesSFX.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Documents/AudioSystem/Build/Desktop/NotesSFX.bank
-  Name: NotesSFX
-  StudioPath: bank:/NotesSFX
-  lastModified: 638879752320012059
+  Path: ../../../../AudioSystem/AudioSystem/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638879752310000000
   FileSizes:
   - Name: Desktop
-    Value: 5184
+    Value: 1524
   Exists: 1
 --- !u!114 &7918468185513669485
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
     Data3: 56576671
     Data4: -541423409
   Banks:
-  - {fileID: -3381010798741283250}
+  - {fileID: -3839155035180856262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
