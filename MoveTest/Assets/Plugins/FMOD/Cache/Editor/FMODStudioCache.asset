@@ -102,6 +102,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6277261465786830905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Victory
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Victory
+  Guid:
+    Data1: 687910574
+    Data2: 1331547378
+    Data3: -1626021199
+    Data4: -768515362
+  Banks:
+  - {fileID: -4071271574528913535}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6127981853966445771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,10 +171,10 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638883127655870707
+  lastModified: 638883295829128692
   FileSizes:
   - Name: Desktop
-    Value: 119744
+    Value: 263392
   Exists: 1
 --- !u!114 &-3082298664258157363
 MonoBehaviour:
@@ -164,7 +191,7 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638883127651170640
+  lastModified: 638883224744782124
   FileSizes:
   - Name: Desktop
     Value: 1524
@@ -195,7 +222,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 65044
+  Length: 65014
 --- !u!114 &-1304369851061693418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,11 +238,38 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Songs.bank
   Name: Songs
   StudioPath: bank:/Songs
-  lastModified: 638878500227479460
+  lastModified: 638883300941795333
   FileSizes:
   - Name: Desktop
-    Value: 795232
+    Value: 3223584
   Exists: 1
+--- !u!114 &-557419185874207951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Songs/MenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Songs/MenuMusic
+  Guid:
+    Data1: 1295437959
+    Data2: 1103490438
+    Data3: -1384219506
+    Data4: -951871346
+  Banks:
+  - {fileID: -1304369851061693418}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 173688
 --- !u!114 &-258553735725058134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,13 +325,15 @@ MonoBehaviour:
   - {fileID: -8441927297547009681}
   - {fileID: 8762443113833909596}
   - {fileID: -8663709894673617563}
+  - {fileID: -557419185874207951}
+  - {fileID: -6277261465786830905}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3082298664258157363}
   StringsBanks:
   - {fileID: 1653513366949044862}
   cacheVersion: 131848
-  cacheTime: 638883127655870707
+  cacheTime: 638883300941795333
   SerializableEventsDict:
   - key: event:/SFX/Invulnerable
     index: 0
@@ -297,6 +353,10 @@ MonoBehaviour:
     index: 7
   - key: event:/SFX/Defeat
     index: 8
+  - key: event:/Songs/MenuMusic
+    index: 9
+  - key: event:/SFX/Victory
+    index: 10
 --- !u!114 &1653513366949044862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,10 +372,10 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638883127651180614
+  lastModified: 638883224744792136
   FileSizes:
   - Name: Desktop
-    Value: 1418
+    Value: 1508
   Exists: 1
 --- !u!114 &6000552601402280393
 MonoBehaviour:

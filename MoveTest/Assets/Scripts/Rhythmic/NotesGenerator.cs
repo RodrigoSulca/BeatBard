@@ -41,7 +41,7 @@ public class NotesGenerator : MonoBehaviour
         PLAYBACK_STATE state;
         musicEventInstance.getPlaybackState(out state);
 
-        if (state == PLAYBACK_STATE.STOPPED)
+        if (state == PLAYBACK_STATE.STOPPED && !RailMove.death)
         {
             finishObj.DOFade(1, 0.5f).OnComplete(() =>
             {

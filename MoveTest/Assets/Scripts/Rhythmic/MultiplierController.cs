@@ -25,6 +25,8 @@ public class MultiplierController : MonoBehaviour
     {
         comboRewards = GetComponent<ComboRewards>();
         initCantNotes = cantNotes;
+        playerStats.failedNotes = 0;
+        playerStats.hitNotes = 0;
     }
 
     // Update is called once per frame

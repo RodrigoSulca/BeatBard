@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using FMOD.Studio;
 
 namespace SlimUI.ModernMenu{
 	public class UIMenuManager : MonoBehaviour {
@@ -79,8 +80,11 @@ namespace SlimUI.ModernMenu{
         public AudioSource sliderSound;
         [Tooltip("The GameObject holding the Audio Source component for the SWOOSH SOUND when switching to the Settings Screen")]
         public AudioSource swooshSound;
-
+		private EventInstance musicEventInstance;
 		void Start(){
+			AudioManager.instance.InitializeSong(FMODEvents.instance.menuSong);
+        	musicEventInstance = AudioManager.instance.GetMusicEventInstance();
+			musicEventInstance.start();
 			CameraObject = transform.GetComponent<Animator>();
 
 			playMenu.SetActive(false);
@@ -295,6 +299,7 @@ namespace SlimUI.ModernMenu{
 					loadingBar.value = 1;
 
 					if (Input.GetKeyDown(userPromptKey)){
+						AudioManager.instance.GetMusicEventInstance().stop(STOP_MODE.IMMEDIATE);
 						operation.allowSceneActivation = true;
 					}
                 }else if(operation.progress >= 0.9f && !waitForInput){

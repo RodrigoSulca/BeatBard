@@ -937,6 +937,13 @@ MonoBehaviour:
       Data3: 1335521436
       Data4: -2079294966
     Path: event:/Songs/TutorialSong
+  <menuSong>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <changeInstrument>k__BackingField:
     Guid:
       Data1: -1192716787
@@ -979,6 +986,13 @@ MonoBehaviour:
       Data3: -1177220426
       Data4: -453331591
     Path: event:/SFX/Defeat
+  <victory>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Invulnerable>k__BackingField:
     Guid:
       Data1: 2013585442
@@ -17239,8 +17253,8 @@ GameObject:
   - component: {fileID: 1709998917}
   - component: {fileID: 1709998916}
   - component: {fileID: 1709998915}
-  - component: {fileID: 1709998919}
   - component: {fileID: 1709998920}
+  - component: {fileID: 1709998919}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged

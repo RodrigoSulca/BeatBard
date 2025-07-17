@@ -25,12 +25,15 @@ public class PauseManager : MonoBehaviour
 
     public void Retry(){
         AudioManager.instance.GetMusicEventInstance().stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        RailMove.death = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
 
     public void Exit(){
         AudioManager.instance.GetMusicEventInstance().stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        RailMove.death = false;
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 }

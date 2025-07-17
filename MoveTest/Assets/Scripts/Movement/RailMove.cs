@@ -18,6 +18,7 @@ public class RailMove : MonoBehaviour
     private Rigidbody rb;
     private BoxCollider playerColl;
     private RawImage deathImgBg;
+    public static bool death;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +26,7 @@ public class RailMove : MonoBehaviour
         playerColl = GetComponent<BoxCollider>();
         deathImgBg = deathBg.GetComponent<RawImage>();
         railIndex++;
+        death = false;
     }
 
     // Update is called once per frame
@@ -98,6 +100,9 @@ public class RailMove : MonoBehaviour
         deathBg.SetActive(true);
         deathImgBg.DOFade(1, 0.5f).OnComplete(() =>
         {
+            deathImgBg.color = new Color(1, 1, 1, 1);
+            death = true;
+            deathImgBg.color = Color.white;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.gameOver, this.transform.position);
             deathPanel.SetActive(true);
             Time.timeScale = 0;

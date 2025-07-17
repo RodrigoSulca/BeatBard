@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using FMOD.Studio;
 public class StatsManager : MonoBehaviour
 {
     public PlayerStats playerStats;
@@ -12,9 +12,14 @@ public class StatsManager : MonoBehaviour
     public TMP_Text scoreTxt;
     public TMP_Text failedNotesTxt;
     public TMP_Text hitNotesTxt;
+    private EventInstance musicEventInstance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        AudioManager.instance.InitializeSong(FMODEvents.instance.victory);
+        musicEventInstance = AudioManager.instance.GetMusicEventInstance();
+        musicEventInstance.start();
+
         scoreTxt.text += playerStats.score.ToString();
         failedNotesTxt.text += playerStats.failedNotes.ToString();
         hitNotesTxt.text += playerStats.hitNotes.ToString();
@@ -26,6 +31,7 @@ public class StatsManager : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        AudioManager.instance.GetMusicEventInstance().stop(STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene(sceneName);
     }
 }
