@@ -18,7 +18,10 @@ public class StatsManager : MonoBehaviour
         scoreTxt.text += playerStats.score.ToString();
         failedNotesTxt.text += playerStats.failedNotes.ToString();
         hitNotesTxt.text += playerStats.hitNotes.ToString();
-        blackEffect.DOFade(0, 0.5f);
+        blackEffect.DOFade(0, 0.5f).OnComplete(() =>
+        {
+            blackEffect.gameObject.SetActive(false);
+        });;
     }
 
     public void ChangeScene(string sceneName)
