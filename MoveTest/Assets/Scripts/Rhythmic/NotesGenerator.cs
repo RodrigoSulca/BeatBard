@@ -41,9 +41,9 @@ public class NotesGenerator : MonoBehaviour
         PLAYBACK_STATE state;
         musicEventInstance.getPlaybackState(out state);
 
-        if(state == PLAYBACK_STATE.STOPPED)
+        if (state == PLAYBACK_STATE.STOPPED)
         {
-            finishObj.DOFade(1,0.5f).OnComplete(() =>
+            finishObj.DOFade(1, 0.5f).OnComplete(() =>
             {
                 SceneManager.LoadScene("FinishScore");
             });
@@ -133,6 +133,11 @@ public class NotesGenerator : MonoBehaviour
         {
             renderer.material = hitNotes.mastilMaterial[(int)instrument];
         }
+        foreach (GameObject ground in hitNotes.grounds)
+        {
+            ground.SetActive(false);
+        }
+        hitNotes.grounds[(int)instrument].SetActive(true);
     }
 
     private IEnumerator Beat()
@@ -155,6 +160,6 @@ public class NotesGenerator : MonoBehaviour
         foreach (GameObject note in notes)
         {
             note.GetComponent<NoteController>().DestroyNote();
-        } 
+        }
     }
 }

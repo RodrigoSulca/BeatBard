@@ -6,7 +6,7 @@ public class HitNotes : MonoBehaviour
     public Material activeMaterial;
     public ComboRewards comboRewards;
     public MultiplierController multiplierController;
-
+    public GameObject[] grounds;
     public Material[] materials;
     public Material[] mastilMaterial;
     public Renderer[] mastilRenderers;
@@ -23,7 +23,6 @@ public class HitNotes : MonoBehaviour
     {
         mRenderer = GetComponent<Renderer>();
         defaultMaterial = mRenderer.material;
-        
     }
 
     void Update()

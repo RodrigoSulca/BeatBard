@@ -11,17 +11,19 @@ public class RailMove : MonoBehaviour
     [Header("Death")]
     public Image dmgPanel;
     public Color dmgColor;
-    public Image deathBg;
+    public GameObject deathBg;
     public GameObject deathPanel;
     private int railIndex;
     private bool isMoving;
     private Rigidbody rb;
     private BoxCollider playerColl;
+    private RawImage deathImgBg;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         playerColl = GetComponent<BoxCollider>();
+        deathImgBg = deathBg.GetComponent<RawImage>();
         railIndex++;
     }
 
@@ -93,8 +95,10 @@ public class RailMove : MonoBehaviour
     {
         Debug.Log("PlayerDeath");
         AudioManager.instance.GetMusicEventInstance().setPitch(0.68f);
-        deathBg.DOFade(0.3f, 0.5f).OnComplete(() =>
+        deathBg.SetActive(true);
+        deathImgBg.DOFade(1, 0.5f).OnComplete(() =>
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.gameOver, this.transform.position);
             deathPanel.SetActive(true);
             Time.timeScale = 0;
         });

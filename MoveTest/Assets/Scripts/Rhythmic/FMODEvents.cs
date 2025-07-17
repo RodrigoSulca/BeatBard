@@ -13,6 +13,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference noteFailed { get; private set; }
     [field: SerializeField] public EventReference failInstrument { get; private set; }
     [field: SerializeField] public EventReference impactPlayer { get; private set; }
+    [field: SerializeField] public EventReference gameOver { get; private set; }
     
     [field: Header("PowerUps SFX")]
     [field: SerializeField] public EventReference Invulnerable { get; private set; }
