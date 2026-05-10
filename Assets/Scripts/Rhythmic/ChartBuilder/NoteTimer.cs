@@ -1,24 +1,55 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
+using FMOD.Studio;
+using UnityEngine.UI;
+using TMPro;
+using System.Collections;
 public class NoteTimer : MonoBehaviour
 {
+    [Header("UI")]
+    [SerializeField] private Slider timeSlider;
+    [SerializeField] private TMP_Text timeTxt;
+
+    [Header("Config")]
     public float time;
-    public AudioSource audioSource; // Asigna el AudioSource que reproduce la canción
     public float delay = 2.3f; // Offset del spawnTime
+    [SerializeField] private int instrumentIndex;
 
-    private List<Note> noteList = new();
-    private bool saved = false;
+    [SerializeField] private List<Note> noteList = new();
+    [SerializeField] private AdvancedGenerator advancedGenerator;
+    private int songLength;
+    private bool isDragging;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    IEnumerator Start()
     {
-
+        yield return new WaitForSeconds(0.5f);
+        AudioManager.instance.InitializeSong(FMODEvents.instance.song);
+        advancedGenerator.musicEventInstance.getDescription(out EventDescription desc);
+        desc.getLength(out songLength);
+        timeSlider.maxValue = songLength;
+        advancedGenerator.musicEventInstance.setParameterByName("FocusInstrument",instrumentIndex);
     }
 
     // Update is called once per frame
     void Update()
     {
-        time = audioSource.time;
+        int timelinePosition;
+        if (!isDragging)
+        {
+            advancedGenerator.musicEventInstance.getTimelinePosition(out timelinePosition);
+            time = timelinePosition / 1000f;
+            timeSlider.value = timelinePosition;
+
+            float minutes = time / 60;
+            float seconds = time % 60;
+
+            // Mostrar formato MM:ss
+            timeTxt.text = $"{minutes:00}:{seconds:00}";
+        }
+        
+
         float spawnTime = time - delay;
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -26,19 +57,25 @@ public class NoteTimer : MonoBehaviour
             noteList.Add(note);
             Debug.Log("Marcado: " + note.spawnTime);
         }
-
-        if (!audioSource.isPlaying && !saved && time > 1f)
-        {
-            SaveChart();
-            saved = true;
-        }
     }
     
-    void SaveChart()
+    public void SaveChart()
     {
         string json = JsonHelper.ToJson(noteList.ToArray(), true);
         string path = Path.Combine(Application.dataPath, "chart.json");
         File.WriteAllText(path, json);
         Debug.Log("¡Chart guardado en: " + path + " con " + noteList.Count + " notas");
+    }
+
+    public void BeginDrag()
+    {
+        Debug.Log("Pointer down");
+        isDragging = true;
+    }
+
+    public void EndDrag()
+    {
+        advancedGenerator.musicEventInstance.setTimelinePosition((int)timeSlider.value);
+        isDragging = false;
     }
 }

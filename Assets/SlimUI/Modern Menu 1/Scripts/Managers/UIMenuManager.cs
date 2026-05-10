@@ -285,10 +285,10 @@ namespace SlimUI.ModernMenu{
 
 		// Load Bar synching animation
 		IEnumerator LoadAsynchronously(string sceneName){ // scene name is just the name of the current scene being loaded
-			AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-			operation.allowSceneActivation = false;
 			mainCanvas.SetActive(false);
 			loadingMenu.SetActive(true);
+			AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+			operation.allowSceneActivation = false;
 
 			while (!operation.isDone){
 				float progress = Mathf.Clamp01(operation.progress / .95f);

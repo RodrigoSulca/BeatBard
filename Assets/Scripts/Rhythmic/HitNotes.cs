@@ -4,7 +4,7 @@ public class HitNotes : MonoBehaviour
 {
     public KeyCode inputKey;
     public Material activeMaterial;
-    public ComboRewards comboRewards;
+    //public ComboRewards comboRewards;
     public MultiplierController multiplierController;
     public GameObject[] grounds;
     public Material[] materials;
@@ -12,7 +12,6 @@ public class HitNotes : MonoBehaviour
     public Renderer[] mastilRenderers;
     public GameObject textPrefab;
     public Transform textSpawner;
-    public ParticleSystem hitParticle;
     public PlayerStats playerStats;
 
     private bool active;
@@ -41,10 +40,19 @@ public class HitNotes : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (active && other.CompareTag("Note"))
+        if (other.CompareTag("TutoNote"))
         {
-            hitParticle.Play();
-            comboRewards.actualCombo++;
+            //comboRewards.actualCombo++;
+            multiplierController.actualNotes++;
+            other.GetComponent<NoteController>().PlayNote();
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playNote, this.transform.position);
+            NoteText("Hit!");
+            active = false;
+            playerStats.hitNotes++;
+        }
+        else if (active && other.CompareTag("Note"))
+        {
+            //comboRewards.actualCombo++;
             multiplierController.actualNotes++;
             other.GetComponent<NoteController>().PlayNote();
             AudioManager.instance.PlayOneShot(FMODEvents.instance.playNote, this.transform.position);

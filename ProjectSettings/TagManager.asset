@@ -9,6 +9,7 @@ TagManager:
   - MultiplierM
   - Enemy
   - NoteHitter
+  - TutoNote
   layers:
   - Default
   - TransparentFX

@@ -417,6 +417,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -602,6 +603,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -738,6 +740,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -874,6 +877,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1178,7 +1182,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -1186,6 +1189,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!114 &1375469107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,6 +1482,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1545,14 +1550,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915767371}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -1629,17 +1634,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &2096941106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,11 +1704,11 @@ MonoBehaviour:
     Path: event:/Songs/TutorialSong
   <menuSong>k__BackingField:
     Guid:
-      Data1: 1295437959
-      Data2: 1103490438
-      Data3: -1384219506
-      Data4: -951871346
-    Path: event:/Songs/MenuMusic
+      Data1: 1067571322
+      Data2: 1308895173
+      Data3: -1125117788
+      Data4: -1578647623
+    Path: event:/Songs/MenuSong
   <changeInstrument>k__BackingField:
     Guid:
       Data1: -1192716787
@@ -1707,60 +1718,60 @@ MonoBehaviour:
     Path: event:/SFX/ChangeInstrument
   <playNote>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1359896584
+      Data2: 1211560560
+      Data3: 2051223996
+      Data4: 91283200
+    Path: event:/NotesSFX/PlayNote
   <noteFailed>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1829024214
+      Data2: 1283838701
+      Data3: 1105624456
+      Data4: -783569754
+    Path: event:/SFX/FailNote
   <failInstrument>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2056685804
+      Data2: 1078014222
+      Data3: -1134172225
+      Data4: 891154515
+    Path: event:/SFX/FailInstrument
   <impactPlayer>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1651887802
+      Data2: 1332738707
+      Data3: 56576671
+      Data4: -541423409
+    Path: event:/SFX/Impact
   <gameOver>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1347676801
+      Data2: 1192496203
+      Data3: 1081246881
+      Data4: -1166958129
+    Path: event:/SFX/Defeat
   <victory>k__BackingField:
     Guid:
-      Data1: 687910574
-      Data2: 1331547378
-      Data3: -1626021199
-      Data4: -768515362
+      Data1: -2041779642
+      Data2: 1150524363
+      Data3: 149311400
+      Data4: -222649616
     Path: event:/SFX/Victory
   <Invulnerable>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2013585442
+      Data2: 1261177140
+      Data3: 844446354
+      Data4: -189898175
+    Path: event:/SFX/Invulnerable
   <healthPlayer>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 272898035
+      Data2: 1102278018
+      Data3: -489311871
+      Data4: 878602475
+    Path: event:/SFX/HealthPlayer 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

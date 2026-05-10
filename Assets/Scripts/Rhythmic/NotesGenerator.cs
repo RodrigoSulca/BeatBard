@@ -10,7 +10,6 @@ public class NotesGenerator : MonoBehaviour
 {
     public enum Instrument { I1, I2, I3 }
     public Instrument instrument;
-    public bool onRhythm;
     public bool canChange;
     public float changeCooldown;
     public Image finishObj;
@@ -18,10 +17,9 @@ public class NotesGenerator : MonoBehaviour
     public Transform[] lines;
     public GameObject[] notePrefabs;
     public NotesList notesList;
+    /*[HideInInspector]*/ public int noteId;
     private HashSet<int> notasGeneradas = new();
     public float tiempoActual;
-    public Image beatImg;
-    public float beatInterval;
     public HitNotes hitNotes;
     public InstrumentVController[] instrumentVControllers;
     public MultiplierController multiplierController;
@@ -101,21 +99,13 @@ public class NotesGenerator : MonoBehaviour
         }
 
         Transform posicionline = lines[nota.line - 1];
-        GameObject nuevaNota = Instantiate(notePrefabs[(int)instrument], posicionline.position, Quaternion.identity);
+        GameObject newNote = Instantiate(notePrefabs[noteId], posicionline.position, Quaternion.identity);
+        newNote.GetComponent<NoteController>().materialId = (int)instrument;
     }
 
 
     void ChangeInstrument()
     {
-        if (onRhythm)
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.changeInstrument, this.transform.position);
-        }
-        else
-        {
-            multiplierController.FailNote();
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.failInstrument, this.transform.position);
-        }
         instrumentVControllers[(int)instrument].active = false;
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
         hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
@@ -138,14 +128,6 @@ public class NotesGenerator : MonoBehaviour
             ground.SetActive(false);
         }
         hitNotes.grounds[(int)instrument].SetActive(true);
-    }
-
-    private IEnumerator Beat()
-    {
-        beatImg.DOFade(0, 0.3f);
-        yield return new WaitForSeconds(beatInterval);
-        beatImg.color = Color.white;
-        StartCoroutine(Beat());
     }
 
     private IEnumerator ChangeCooldown()

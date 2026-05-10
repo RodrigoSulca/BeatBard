@@ -1,9 +1,12 @@
 using UnityEngine;
 using DG.Tweening;
+[RequireComponent(typeof(MeshRenderer))]
 public class NoteController : MonoBehaviour
 {
     public float speed;
     public int points;
+    public int materialId;
+    [SerializeField] private Material[] materials;
     public PlayerStats playerStats;
     private HitNotes hitNotes;
     private GameObject endPoint;
@@ -11,6 +14,7 @@ public class NoteController : MonoBehaviour
     private Rigidbody rb;
     void Start()
     {
+        GetComponent<MeshRenderer>().material = materials[materialId];
         endPoint = GameObject.FindWithTag("EndPoint");
         multiplierController = GameObject.FindWithTag("MultiplierM").GetComponent<MultiplierController>();
         hitNotes = GameObject.FindWithTag("NoteHitter").GetComponent<HitNotes>();
