@@ -62,7 +62,7 @@ public class NotesGenerator : MonoBehaviour
         musicEventInstance.getTimelinePosition(out timelinePosition);
         tiempoActual = timelinePosition / 1000f;
 
-        for (int i = 0; i < notesList.notes.Length; i++)
+        for (int i = 0; i < notesList.notes.Count; i++)
         {
             if (!notasGeneradas.Contains(i) && notesList.notes[i].spawnTime <= tiempoActual)
             {
@@ -85,8 +85,8 @@ public class NotesGenerator : MonoBehaviour
                 if (n.spawnTime > tiempoActual)
                     futuras.Add(n);
             }
-            notesList = new NotesList { notes = futuras.ToArray() };
-            Debug.Log("Notas futuras cargadas: " + notesList.notes.Length);
+            notesList = new NotesList { notes = futuras };
+            Debug.Log("Notas futuras cargadas: " + notesList.notes.Count);
         }
     }
 

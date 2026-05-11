@@ -14,10 +14,7 @@ public class NoteTimer : MonoBehaviour
     [Header("Config")]
     public float time;
     public float delay = 2.3f; // Offset del spawnTime
-    [SerializeField] private int instrumentIndex;
-
-    [SerializeField] private List<Note> noteList = new();
-    [SerializeField] private AdvancedGenerator advancedGenerator;
+    [SerializeField] private CharterDemo charterDemo;
     private int songLength;
     private bool isDragging;
 
@@ -26,10 +23,9 @@ public class NoteTimer : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         AudioManager.instance.InitializeSong(FMODEvents.instance.song);
-        advancedGenerator.musicEventInstance.getDescription(out EventDescription desc);
+        charterDemo.musicEventInstance.getDescription(out EventDescription desc);
         desc.getLength(out songLength);
         timeSlider.maxValue = songLength;
-        advancedGenerator.musicEventInstance.setParameterByName("FocusInstrument",instrumentIndex);
     }
 
     // Update is called once per frame
@@ -38,7 +34,7 @@ public class NoteTimer : MonoBehaviour
         int timelinePosition;
         if (!isDragging)
         {
-            advancedGenerator.musicEventInstance.getTimelinePosition(out timelinePosition);
+            charterDemo.musicEventInstance.getTimelinePosition(out timelinePosition);
             time = timelinePosition / 1000f;
             timeSlider.value = timelinePosition;
 
@@ -54,17 +50,17 @@ public class NoteTimer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Note note = new() { spawnTime = Mathf.Round(spawnTime * 1000f) / 1000f, line = 1};
-            noteList.Add(note);
+            charterDemo.notesList.Add(note);
             Debug.Log("Marcado: " + note.spawnTime);
         }
     }
     
     public void SaveChart()
     {
-        string json = JsonHelper.ToJson(noteList.ToArray(), true);
+        string json = JsonHelper.ToJson(charterDemo.notesList.ToArray(), true);
         string path = Path.Combine(Application.dataPath, "chart.json");
         File.WriteAllText(path, json);
-        Debug.Log("¡Chart guardado en: " + path + " con " + noteList.Count + " notas");
+        Debug.Log("¡Chart guardado en: " + path + " con " + charterDemo.notesList.Count + " notas");
     }
 
     public void BeginDrag()
@@ -75,7 +71,7 @@ public class NoteTimer : MonoBehaviour
 
     public void EndDrag()
     {
-        advancedGenerator.musicEventInstance.setTimelinePosition((int)timeSlider.value);
+        charterDemo.musicEventInstance.setTimelinePosition((int)timeSlider.value);
         isDragging = false;
     }
 }

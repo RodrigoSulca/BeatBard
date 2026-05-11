@@ -1,0 +1,80 @@
+{
+    "Items": [
+        {
+            "spawnTime": 10.399999618530274,
+            "line": 1
+        },
+        {
+            "spawnTime": 10.600000381469727,
+            "line": 1
+        },
+        {
+            "spawnTime": 10.899999618530274,
+            "line": 1
+        },
+        {
+            "spawnTime": 11.100000381469727,
+            "line": 1
+        },
+        {
+            "spawnTime": 11.399999618530274,
+            "line": 1
+        },
+        {
+            "spawnTime": 12.0,
+            "line": 1
+        },
+        {
+            "spawnTime": 12.699999809265137,
+            "line": 1
+        },
+        {
+            "spawnTime": 12.899999618530274,
+            "line": 1
+        },
+        {
+            "spawnTime": 14.0,
+            "line": 1
+        },
+        {
+            "spawnTime": 14.199999809265137,
+            "line": 1
+        },
+        {
+            "spawnTime": 14.5,
+            "line": 1
+        },
+        {
+            "spawnTime": 14.699999809265137,
+            "line": 1
+        },
+        {
+            "spawnTime": 15.0,
+            "line": 1
+        },
+        {
+            "spawnTime": 15.600000381469727,
+            "line": 1
+        },
+        {
+            "spawnTime": 16.0,
+            "line": 1
+        },
+        {
+            "spawnTime": 16.200000762939454,
+            "line": 1
+        },
+        {
+            "spawnTime": 16.5,
+            "line": 1
+        },
+        {
+            "spawnTime": 16.700000762939454,
+            "line": 1
+        },
+        {
+            "spawnTime": 17.5,
+            "line": 1
+        }
+    ]
+}

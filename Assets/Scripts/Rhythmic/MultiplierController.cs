@@ -14,7 +14,7 @@ public class MultiplierController : MonoBehaviour
     public SpriteRenderer multSpriteR;
     public TMP_Text multiplierTxt;
     public TMP_Text pointsTxt;
-    private ComboRewards comboRewards;
+    //private ComboRewards comboRewards;
     public NoteFeedback feedback;
     public HitNotes hitNotes;
     public BeatFlash beatFlash;
@@ -23,7 +23,7 @@ public class MultiplierController : MonoBehaviour
 
     void Start()
     {
-        comboRewards = GetComponent<ComboRewards>();
+        //comboRewards = GetComponent<ComboRewards>();
         initCantNotes = cantNotes;
         playerStats.failedNotes = 0;
         playerStats.hitNotes = 0;
@@ -81,7 +81,7 @@ public class MultiplierController : MonoBehaviour
     public void FailNote()
     {
         ResetMultBars();
-        comboRewards.ResetCombo();
+        //comboRewards.ResetCombo();
         actualMult = 1;
         cantNotes = initCantNotes;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.noteFailed, this.transform.position);

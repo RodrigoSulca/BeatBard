@@ -8,24 +8,24 @@ public class NoteController : MonoBehaviour
     public int materialId;
     [SerializeField] private Material[] materials;
     public PlayerStats playerStats;
-    private HitNotes hitNotes;
-    private GameObject endPoint;
-    private MultiplierController multiplierController;
-    private Rigidbody rb;
-    void Start()
+    [HideInInspector] public HitNotes hitNotes;
+    [HideInInspector] public GameObject endPoint;
+    [HideInInspector] public MultiplierController multiplierController;
+    [HideInInspector] public Rigidbody rb;
+    public virtual void Start()
     {
         GetComponent<MeshRenderer>().material = materials[materialId];
         endPoint = GameObject.FindWithTag("EndPoint");
         multiplierController = GameObject.FindWithTag("MultiplierM").GetComponent<MultiplierController>();
         hitNotes = GameObject.FindWithTag("NoteHitter").GetComponent<HitNotes>();
+        rb = GetComponent<Rigidbody>();
         MoveDown();
 
     }
 
-    void MoveDown()
+    public virtual void MoveDown()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.DOMoveZ(endPoint.transform.position.z, speed).SetEase(Ease.Linear).OnComplete(() =>
+        rb.DOMoveZ(endPoint.transform.position.z, speed).SetEase(Ease.Linear).SetSpeedBased().OnComplete(() =>
         {
             if (gameObject.CompareTag("Note"))
             {
@@ -37,7 +37,7 @@ public class NoteController : MonoBehaviour
         });
     }
 
-    public void PlayNote()
+    public virtual void PlayNote()
     {
         int finalPoints = points * multiplierController.actualMult;
         multiplierController.totalPoints += finalPoints;

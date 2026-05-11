@@ -18,7 +18,6 @@ public class AdvancedGenerator : MonoBehaviour
     public Transform[] lines;
     public GameObject[] notePrefabs;
     public NotesList notesList;
-    [SerializeField] private AudioMixer audioMixer;
     [HideInInspector] public int noteId;
     private HashSet<int> notasGeneradas = new();
     public float tiempoActual;
@@ -64,7 +63,7 @@ public class AdvancedGenerator : MonoBehaviour
         musicEventInstance.getTimelinePosition(out timelinePosition);
         tiempoActual = timelinePosition / 1000f;
 
-        for (int i = 0; i < notesList.notes.Length; i++)
+        for (int i = 0; i < notesList.notes.Count; i++)
         {
             if (!notasGeneradas.Contains(i) && notesList.notes[i].spawnTime <= tiempoActual)
             {
@@ -87,8 +86,8 @@ public class AdvancedGenerator : MonoBehaviour
                 if (n.spawnTime > tiempoActual)
                     futuras.Add(n);
             }
-            notesList = new NotesList { notes = futuras.ToArray() };
-            Debug.Log("Notas futuras cargadas: " + notesList.notes.Length);
+            notesList = new NotesList { notes = futuras };
+            Debug.Log("Notas futuras cargadas: " + notesList.notes.Count);
         }
     }
 
@@ -101,13 +100,24 @@ public class AdvancedGenerator : MonoBehaviour
         }
 
         Transform posicionline = lines[nota.line - 1];
-        GameObject newNote = Instantiate(notePrefabs[noteId], posicionline.position, Quaternion.identity);
+         GameObject newNote =
+            Instantiate(
+                notePrefabs[(int)nota.type],
+                posicionline.position,
+                Quaternion.identity
+            );
+
         newNote.GetComponent<NoteController>().materialId = (int)instrument;
+        if(nota.type == Note.NoteType.Hold)
+        {
+            newNote.GetComponent<HoldNote>().holdTime = nota.holdTime;
+        }
     }
 
 
     void ChangeInstrument()
     {
+        musicEventInstance.setParameterByName("FocusInstrument",(int)instrument);
         instrumentVControllers[(int)instrument].active = false;
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
         hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];

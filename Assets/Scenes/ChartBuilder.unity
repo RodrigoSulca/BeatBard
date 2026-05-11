@@ -168,7 +168,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.9463968, y: 1, z: 1}
   m_Center: {x: -0.47319856, y: 0, z: 0}
@@ -2392,9 +2392,7 @@ MonoBehaviour:
   timeTxt: {fileID: 614885606}
   time: 0
   delay: 2.3
-  instrumentIndex: 2
-  noteList: []
-  advancedGenerator: {fileID: 1158672917}
+  charterDemo: {fileID: 1158672918}
 --- !u!4 &1114018484
 Transform:
   m_ObjectHideFlags: 0
@@ -2575,9 +2573,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1158672916}
-  - component: {fileID: 1158672917}
+  - component: {fileID: 1158672918}
   m_Layer: 0
-  m_Name: NotesManager
+  m_Name: DemoManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2598,7 +2596,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1158672917
+--- !u!114 &1158672918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2607,32 +2605,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1158672915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db7aaa7d8d388c4096e1fada2e8f949, type: 3}
+  m_Script: {fileID: 11500000, guid: c15712e952b510142a4d3816d8addeba, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AdvancedGenerator
-  instrument: 0
-  canChange: 1
-  changeCooldown: 1
-  finishObj: {fileID: 0}
-  charts:
-  - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
-  - {fileID: 4900000, guid: 06eb25212180d8541a2c66a9684a6978, type: 3}
-  - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::CharterDemo
+  instrument: 2
+  chart: {fileID: 4900000, guid: 3bdb078b9367a1a4a964b5564619390e, type: 3}
   lines:
   - {fileID: 1527473642}
   notePrefabs:
-  - {fileID: 3571433703518203985, guid: e3661670266e82d418f4a6a6cd7b5199, type: 3}
-  notesList:
-    notes: []
-  audioMixer: {fileID: 0}
+  - {fileID: 3571433703518203985, guid: 98ff49f21a9b74a4bb2071bb2a8ef01b, type: 3}
+  - {fileID: 3571433703518203985, guid: 2b7c920f4c76ff44f9f78b254a87c0df, type: 3}
+  notesList: []
   noteId: 0
-  tiempoActual: 0
   hitNotes: {fileID: 1856541611}
   instrumentVControllers:
   - {fileID: 468945378}
   - {fileID: 2110968685}
   - {fileID: 1336178899}
   multiplierController: {fileID: 873967995}
+  tiempoActual: 0
+  spawnAheadTime: 0
 --- !u!1 &1276575737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4888,7 +4880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Save Chart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

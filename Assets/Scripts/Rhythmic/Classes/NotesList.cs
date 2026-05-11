@@ -1,6 +1,8 @@
 
+using System.Collections.Generic;
+
 [System.Serializable]
 public class NotesList
 {
-    public Note[] notes;
+    public List<Note> notes;
 }

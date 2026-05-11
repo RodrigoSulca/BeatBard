@@ -9,20 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: f1093ce6e445ca2468b5fbe29329d27b
   - enabled: 1
-    path: Assets/Scenes/Branches/Manuel.unity
-    guid: f83087d6fc3760942a2ec8775ae3663d
-  - enabled: 1
-    path: Assets/Scenes/Branches/Rodrigo.unity
-    guid: ef5b17e8243f7104e9c08edef168265d
-  - enabled: 0
-    path: Assets/Scenes/RailsMovement.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: ab40cbd408feddf4dbec3c284e2e3e3a
   - enabled: 1
     path: Assets/Scenes/FinishScore.unity
     guid: 457019a44e4ce7c4e8b78496fa95f5c8
+  - enabled: 0
+    path: Assets/Scenes/ChartBuilder.unity
+    guid: 65e54f1977cd87146b631f5309e18eca
+  - enabled: 0
+    path: Assets/Scenes/Branches/Manuel.unity
+    guid: f83087d6fc3760942a2ec8775ae3663d
+  - enabled: 0
+    path: Assets/Scenes/Branches/Rodrigo.unity
+    guid: 3f9d9b83acf596d468f936dbf19c80a7
+  - enabled: 0
+    path: Assets/Scenes/RailsMovement.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

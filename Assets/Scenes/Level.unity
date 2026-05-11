@@ -531,7 +531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputKey: 108
   activeMaterial: {fileID: 2100000, guid: 93a754d7d1dcf594888236a59202ebd0, type: 2}
-  comboRewards: {fileID: 0}
   multiplierController: {fileID: 983176795}
   grounds:
   - {fileID: 2021049949}
@@ -12078,21 +12077,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db7aaa7d8d388c4096e1fada2e8f949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedGenerator
-  instrument: 0
+  instrument: 2
   canChange: 1
   changeCooldown: 1
   finishObj: {fileID: 1617832106}
   charts:
   - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
   - {fileID: 4900000, guid: 06eb25212180d8541a2c66a9684a6978, type: 3}
-  - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
+  - {fileID: 4900000, guid: 3bdb078b9367a1a4a964b5564619390e, type: 3}
   lines:
   - {fileID: 119670679}
   notePrefabs:
   - {fileID: 3571433703518203985, guid: e3661670266e82d418f4a6a6cd7b5199, type: 3}
+  - {fileID: 3571433703518203985, guid: ca925135546170e49b094060c2460818, type: 3}
   notesList:
     notes: []
-  audioMixer: {fileID: 0}
   noteId: 0
   tiempoActual: 0
   hitNotes: {fileID: 81368750}
